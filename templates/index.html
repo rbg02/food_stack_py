@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <style>
+        .card1 {
+            background-image: url('{{ url_for('static', filename='upload/' + photo) }}');
+        }
+    </style>
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
@@ -43,7 +48,7 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="index.html" class="logo">
-                            <img src="assets/images/Food_Stack_Logo.png" id="logo" align="klassy cafe html template">
+                            <img src="{{url_for('static', filename='Food_Stack_Logo.png')}}" align="middle" alt=""/>
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
@@ -107,21 +112,21 @@
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-01.jpg" alt="">
+                                <img src="{{url_for('static', filename='slide-01.jpg')}}" align="middle" alt=""/>
                             </div>
                           </div>
                           <!-- // Item -->
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-02.jpg" alt="">
+                                <img src="{{url_for('static', filename='slide-02.jpg')}}" align="middle" alt=""/>
                             </div>
                           </div>
                           <!-- // Item -->
                           <!-- Item -->
                           <div class="item">
                             <div class="img-fill">
-                                <img src="assets/images/slide-03.jpg" alt="">
+                                <img src="{{url_for('static', filename='slide-03.jpg')}}" align="middle" alt=""/>
                             </div>
                           </div>
                           <!-- // Item -->
@@ -146,13 +151,13 @@
                         <p>Food Stack est l'un des meilleurs <a href="https://templatemo.com/tag/restaurant" target="_blank" rel="sponsored">restaurant HTML templates</a> with Bootstrap v4.5.2 CSS framework. You can download and feel free to use this website template layout for your restaurant business. You are allowed to use this template for commercial purposes. <br><br>You are NOT allowed to redistribute the template ZIP file on any template donwnload website. Please contact us for more information.</p>
                         <div class="row">
                             <div class="col-4">
-                                <img src="assets/images/about-thumb-01.jpg" alt="">
+                                <img src="{{url_for('static', filename='about-thumb-01.jpg')}}" align="middle" alt=""/>
                             </div>
                             <div class="col-4">
-                                <img src="assets/images/about-thumb-02.jpg" alt="">
+                                <img src="{{url_for('static', filename='about-thumb-02.jpg')}}" align="middle" alt=""/>
                             </div>
                             <div class="col-4">
-                                <img src="assets/images/about-thumb-03.jpg" alt="">
+                                <img src="{{url_for('static', filename='about-thumb-03.jpg')}}" align="middle" alt=""/>
                             </div>
                         </div>
                     </div>
@@ -161,7 +166,7 @@
                     <div class="right-content">
                         <div class="thumb">
                             <a rel="nofollow" href="http://youtube.com"><i class="fa fa-play"></i></a>
-                            <img src="assets/images/about-video-bg.jpg" alt="">
+                            <img src="{{url_for('static', filename='about-video-bg.jpg')}}" align="middle" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -187,7 +192,7 @@
                 <div class="owl-menu-item owl-carousel">
                     <div class="item">
                         <div class='card card1'>
-                            <div class="price"><h6>{{prix}}</h6></div>
+                            <div class="price"><h6>{{prix}} FCFA</h6></div>
                             <div class='info'>
                               <h1 class='title'>{{nom}}</h1>
                               <p class='description'>{{description}}</p>
@@ -284,7 +289,7 @@
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                             </ul>
-                            <img src="assets/images/chefs-01.jpg" alt="Chef #1">
+                            <img src="{{url_for('static', filename='chefs-01.jpg')}}" align="middle" alt=""/>
                         </div>
                         <div class="down-content">
                             <h4>Randy Walker</h4>
@@ -301,7 +306,7 @@
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-behance"></i></a></li>
                             </ul>
-                            <img src="assets/images/chefs-02.jpg" alt="Chef #2">
+                            <img src="{{url_for('static', filename='chefs-02.jpg')}}" align="middle" alt=""/>
                         </div>
                         <div class="down-content">
                             <h4>David Martin</h4>
@@ -318,7 +323,7 @@
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-google"></i></a></li>
                             </ul>
-                            <img src="assets/images/chefs-03.jpg" alt="Chef #3">
+                            <img src="{{url_for('static', filename='chefs-03.jpg')}}" align="middle" alt=""/>
                         </div>
                         <div class="down-content">
                             <h4>Julio Ponch</h4>
@@ -459,9 +464,9 @@
                                 <div class="row">
                                     <div class="col-lg-6 offset-lg-3">
                                         <ul>
-                                          <li><a href='#tabs-1'><img src="assets/images/tab-icon-01.png" alt="">Petit-déjeuner</a></li>
-                                          <li><a href='#tabs-2'><img src="assets/images/tab-icon-02.png" alt="">Déjeuner</a></a></li>
-                                          <li><a href='#tabs-3'><img src="assets/images/tab-icon-03.png" alt="">Dîner</a></a></li>
+                                          <li><a href='#tabs-1'><img src="{{url_for('static', filename='tab-icon-01.png')}}" align="middle" alt=""/>Petit-déjeuner</a></li>
+                                          <li><a href='#tabs-2'><img src="{{url_for('static', filename='tab-icon-02.png')}}" align="middle" alt=""/>Déjeuner</a></a></li>
+                                          <li><a href='#tabs-3'><img src="{{url_for('static', filename='tab-icon-03.png')}}" align="middle" alt=""/>Dîner</a></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -476,7 +481,7 @@
                                                 <div class="left-list">
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-01.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-01.png')}}" align="middle" alt=""/>
                                                             <h4>Salade de poulet frais</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -486,7 +491,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-02.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-02.png')}}" align="middle" alt=""/>
                                                             <h4>Du jus d'orange</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -496,7 +501,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-03.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-03.png')}}" align="middle" alt=""/>
                                                             <h4>Salade de fruit</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -512,7 +517,7 @@
                                                 <div class="right-list">
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-04.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-04.png')}}" align="middle" alt=""/>
                                                             <h4>Omelette aux oeufs</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -522,7 +527,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-05.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-05.png')}}" align="middle" alt=""/>
                                                             <h4>Dollma Piré</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -532,7 +537,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-06.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-06.png')}}" align="middle" alt=""/>
                                                             <h4>Omelette & Fromage</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -552,7 +557,7 @@
                                                 <div class="left-list">
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-04.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-04.png')}}" align="middle" alt=""/>
                                                             <h4>Omelette aux oeufs</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -562,7 +567,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-05.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-05.png')}}" align="middle" alt=""/>
                                                             <h4>Dollma Piré</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -572,7 +577,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-06.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-06.png')}}" align="middle" alt=""/>
                                                             <h4>Omelette & Fromage</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -588,7 +593,7 @@
                                                 <div class="right-list">
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-01.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-01.png')}}" align="middle" alt=""/>
                                                             <h4>Salade de poulet frais</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -598,7 +603,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-02.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-02.png')}}" align="middle" alt=""/>
                                                             <h4>Du jus d'orange</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -608,7 +613,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-03.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-03.png')}}" align="middle" alt=""/>
                                                             <h4>Salade de fruit</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -628,7 +633,7 @@
                                                 <div class="left-list">
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-05.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-05.png')}}" align="middle" alt=""/>
                                                             <h4>Omelette aux oeufs</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -638,7 +643,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-03.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-03.png')}}" align="middle" alt=""/>
                                                             <h4>Du jus d'orange</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -648,7 +653,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-02.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-02.png')}}" align="middle" alt=""/>
                                                             <h4>Salade de fruit</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -664,7 +669,7 @@
                                                 <div class="right-list">
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-06.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-06.png')}}" align="middle" alt=""/>
                                                             <h4>Salade de poulet frais</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -674,7 +679,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-01.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-01.png')}}" align="middle" alt=""/>
                                                             <h4>Dollma Piré</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -684,7 +689,7 @@
                                                     </div>
                                                     <div class="col-lg-12">
                                                         <div class="tab-item">
-                                                            <img src="assets/images/tab-item-04.png" alt="">
+                                                            <img src="{{url_for('static', filename='tab-item-04.png')}}" align="middle" alt=""/>
                                                             <h4>Omelette & Fromage</h4>
                                                             <p>Lorem ipsum dolor sit amet, consectetur koit adipiscing elit, sed do.</p>
                                                             <div class="price">
@@ -722,7 +727,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/images/white-logo.png" alt=""></a>
+                        <a href="index.html"><img src="{{url_for('static', filename='white-logo.png')}}" align="middle" alt=""/></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-xs-12">
